@@ -3,7 +3,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 // Components
 import DashboardComponent from "./components/pages/dashboard.component";
-import NotFoundComponent from "./components/pages/notfound.component";
+import NotFoundComponent from "./Pages/NotFound";
 
 // Styles
 import './App.css';
