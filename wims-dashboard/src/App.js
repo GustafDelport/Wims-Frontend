@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import {Component} from "react";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Components
+import DashboardComponent from "./components/pages/dashboard.component";
+import NotFoundComponent from "./components/pages/notfound.component";
+
+// Styles
+import './App.css';
+import 'rsuite/lib/styles/themes/default/index.less';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+
+//Services
+import DataService from "./Services/";
+import {Alert} from "rsuite";
+
+class App extends Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+          data: undefined
+        }
+    }
+
+    async componentDidMount(){
+      
+    }
+
+    //all routes come here
+    render() {
+      return (
+        <BrowserRouter>
+          <Switch>
+            <Route exact path={["/", "/home", "/dashboard"]} component={DashboardComponent}/>
+            <Route component={NotFoundComponent}/>
+          </Switch>
+        </BrowserRouter>
+      )
+    }
 }
 
 export default App;
