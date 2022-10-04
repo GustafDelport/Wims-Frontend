@@ -25,10 +25,6 @@
   margin-bottom: auto;
 }
 
-.rs-sidenav-default {
-  background-color: #3326ae !important;
-}
-
 .rs-nav ul li {
   margin-left: 0.75rem;
 }
@@ -38,16 +34,6 @@
   margin-right: auto;
 }
 
-.rs-navbar-subtle {
-  background-color: #3326ae !important;
-}
-
-.rs-nav-item {
-  background-color: #3326ae !important;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  margin-right: 0.75rem;
-}
 
 .nav-toggle .rs-nav-item {
   margin-right: 0;
@@ -138,6 +124,10 @@ margin: 0.6rem 1rem 0.6rem 1rem;
 
 .rs-panel-shaded{
   background-color: #fff;
+}
+
+.rs-navbar-brand{
+  padding: 0px 5px !important;
 }
 
 @media (max-width: 991px) {
