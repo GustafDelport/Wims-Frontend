@@ -32,7 +32,7 @@ const headerStylesSmall = {
 };
 
 const divStyle ={
-    width: 240,
+    width: 20,
     height: '100%',
     display: 'inline-table',
     marginRight: 10
@@ -84,7 +84,7 @@ class SidebarComponent extends Component{
             <div style={divStyle}>
                 <Sidebar
                 style={{ display: 'flex', flexDirection: 'column'}}
-                width={expand ? '100%' : 56}
+                width={expand ? 256 : 56}
                 collapsible
                 >
                     <Sidenav.Header>

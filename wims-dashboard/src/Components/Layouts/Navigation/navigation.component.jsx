@@ -5,6 +5,7 @@ import DashboardIcon from '@rsuite/icons/Dashboard';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import PeoplesIcon from '@rsuite/icons/Peoples';
 import HistoryIcon from '@rsuite/icons/History';
+import GearIcon from '@rsuite/icons/Gear';
 
 class NavigationComponent extends Component {
     render() {
@@ -25,6 +26,10 @@ class NavigationComponent extends Component {
                         <Nav.Menu placement="rightStart" eventKey="4" title="Orders" icon={<HistoryIcon />}>
                             <Nav.Item eventKey="4-1">Current Orders</Nav.Item>
                             <Nav.Item eventKey="4-2">Past Orders</Nav.Item>
+                        </Nav.Menu>
+                        <Nav.Menu placement="rightStart" eventKey="5" title="Settings" icon={<GearIcon />}>
+                            <Nav.Item eventKey="5-1">General</Nav.Item>
+                            <Nav.Item eventKey="5-2">User Settings</Nav.Item>
                         </Nav.Menu>
                 </Nav>
             </Sidenav.Body>

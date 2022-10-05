@@ -12,15 +12,18 @@ class DashboardComponent extends Component{
                 <Helmet>
                     <title>Wims Dashboard</title>
                 </Helmet>
+
                 <Container>
                     <SidebarComponent activeKey="1" />
-                    <Container className='container-content'>
-                        <h2>Hello</h2>
-                    </Container>
+                        <Container>
+                            <Header>Header</Header>
+                            <Content className='container-content'>
+                                <h2>Hello</h2>
+                            </Content>
+                            <FooterComponent />
+                        </Container>
                 </Container>
-                <FooterComponent />
             </>
-            
         )
     }
 }
