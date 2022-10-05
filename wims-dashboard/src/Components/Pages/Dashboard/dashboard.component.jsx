@@ -4,6 +4,7 @@ import { Container, Content } from 'rsuite';
 
 import FooterComponent from '../../Layouts/Footer/footer.component';
 import SidebarComponent from '../../Layouts/Navigation/sidebar.component';
+import HeaderComponent from '../../Layouts/Header/header.component';
 
 class DashboardComponent extends Component{
     render() {
@@ -16,10 +17,10 @@ class DashboardComponent extends Component{
                 <Container>
                     <SidebarComponent activeKey="1" />
                         <Container>
-                            <Header>Header</Header>
-                            <Content className='container-content'>
+                            <HeaderComponent/>
+                            <Container className='container-content'>
                                 <h2>Hello</h2>
-                            </Content>
+                            </Container>
                             <FooterComponent />
                         </Container>
                 </Container>
