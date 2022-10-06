@@ -18,9 +18,9 @@ class CurrentOrdersComponent extends Component{
                     <SidebarComponent activeKey="4-1" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Current Orders</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>

@@ -18,9 +18,9 @@ class PastOrdersComponent extends Component{
                     <SidebarComponent activeKey="4-2" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Past Orders</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>

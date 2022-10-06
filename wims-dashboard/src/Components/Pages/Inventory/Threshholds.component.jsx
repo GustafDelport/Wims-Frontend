@@ -18,9 +18,9 @@ class ThresholdComponent extends Component{
                     <SidebarComponent activeKey="2-1" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Thresholds</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>

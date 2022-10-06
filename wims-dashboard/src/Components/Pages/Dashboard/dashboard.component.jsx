@@ -18,9 +18,9 @@ class DashboardComponent extends Component{
                     <SidebarComponent activeKey="1" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Dashboard</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>

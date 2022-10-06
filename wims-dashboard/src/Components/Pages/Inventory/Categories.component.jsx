@@ -18,9 +18,9 @@ class CategoriesComponent extends Component{
                     <SidebarComponent activeKey="2-3" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Categories</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>

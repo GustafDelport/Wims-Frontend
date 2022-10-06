@@ -18,9 +18,9 @@ class ProductComponent extends Component{
                     <SidebarComponent activeKey="2-2" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Products</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>

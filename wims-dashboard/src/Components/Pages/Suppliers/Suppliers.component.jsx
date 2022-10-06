@@ -18,9 +18,9 @@ class SuppliersComponent extends Component{
                     <SidebarComponent activeKey="3-1" />
                         <Container>
                             <HeaderComponent/>
-                            <Container className='container-content'>
+                            <Content className='container-content'>
                                 <h2>Suppliers</h2>
-                            </Container>
+                            </Content>
                             <FooterComponent />
                         </Container>
                 </Container>
