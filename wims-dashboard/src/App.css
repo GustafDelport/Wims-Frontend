@@ -22,8 +22,8 @@
 }
 
 .rs-sidenav {
-  margin-top: 20%;
   margin-bottom: auto;
+  height: 100%;
 }
 
 .rs-nav ul li {
