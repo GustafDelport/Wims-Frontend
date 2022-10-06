@@ -16,16 +16,16 @@ class NavigationComponent extends Component {
                         Dashboard
                     </Nav.Item>
                         <Nav.Menu placement="rightStart" eventKey="2" title="Inventory" icon={<MagicIcon />}>
-                            <Nav.Item eventKey="2-1" href="/inventory">Thresholds</Nav.Item>
-                            <Nav.Item eventKey="2-2">Manage Products</Nav.Item>
-                            <Nav.Item eventKey="2-3">Manage Categories</Nav.Item>
+                            <Nav.Item eventKey="2-1" href="/threshold">Thresholds</Nav.Item>
+                            <Nav.Item eventKey="2-2" href="/Product">Manage Products</Nav.Item>
+                            <Nav.Item eventKey="2-3" href="/Category">Manage Categories</Nav.Item>
                         </Nav.Menu>
                         <Nav.Menu placement="rightStart" eventKey="3" title="Suppliers" icon={<PeoplesIcon />}>
-                            <Nav.Item eventKey="3-1">Manage Suppliers</Nav.Item>
+                            <Nav.Item eventKey="3-1" href="/Supplier">Manage Suppliers</Nav.Item>
                         </Nav.Menu>
                         <Nav.Menu placement="rightStart" eventKey="4" title="Orders" icon={<HistoryIcon />}>
-                            <Nav.Item eventKey="4-1">Current Orders</Nav.Item>
-                            <Nav.Item eventKey="4-2">Past Orders</Nav.Item>
+                            <Nav.Item eventKey="4-1" href="/CurrentOrders">Current Orders</Nav.Item>
+                            <Nav.Item eventKey="4-2" href="/PastOrders">Past Orders</Nav.Item>
                         </Nav.Menu>
                         <Nav.Menu placement="rightStart" eventKey="5" title="Settings" icon={<GearIcon />}>
                             <Nav.Item eventKey="5-1">General</Nav.Item>

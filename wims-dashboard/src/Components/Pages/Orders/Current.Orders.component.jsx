@@ -6,20 +6,20 @@ import FooterComponent from '../../Layouts/Footer/footer.component';
 import SidebarComponent from '../../Layouts/Navigation/sidebar.component';
 import HeaderComponent from '../../Layouts/Header/header.component';
 
-class DummyComponent extends Component{
+class CurrentOrdersComponent extends Component{
     render() {
         return (
             <>
                 <Helmet>
-                    <title>Thresholds</title>
+                    <title>Current Orders</title>
                 </Helmet>
 
                 <Container>
-                    <SidebarComponent activeKey="2-1" />
+                    <SidebarComponent activeKey="4-1" />
                         <Container>
                             <HeaderComponent/>
                             <Container className='container-content'>
-                                <h2>Inventory</h2>
+                                <h2>Current Orders</h2>
                             </Container>
                             <FooterComponent />
                         </Container>
@@ -31,4 +31,4 @@ class DummyComponent extends Component{
     }
 }
 
-export default DummyComponent
+export default CurrentOrdersComponent

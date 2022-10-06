@@ -5,13 +5,14 @@ class HeaderComponent extends Component{
     render() {
         return (
             <>
-                <Header style={{textAlign: "right"}}>
+                <Header style={{textAlign: "left", display: "flex"}}>
+                    <h3 style={{marginLeft: 0}}>I am a header</h3>
                     <Avatar 
                         size='md'
                         circle
                         src="/Assets/Logo.png" 
                         alt="Wims"
-                        style={{Margin: 5}} />
+                        style={{Margin: 5, marginRight:"5", marginLeft: "Auto"}} />
                 </Header>
             </>
         )
