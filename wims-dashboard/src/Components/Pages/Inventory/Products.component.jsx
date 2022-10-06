@@ -6,29 +6,25 @@ import FooterComponent from '../../Layouts/Footer/footer.component';
 import SidebarComponent from '../../Layouts/Navigation/sidebar.component';
 import HeaderComponent from '../../Layouts/Header/header.component';
 
-class ProductComponent extends Component{
-    render() {
+const ProductsComponent = () =>{
         return (
-            <>
-                <Helmet>
-                    <title>Products</title>
-                </Helmet>
+        <>
+            <Helmet>
+                <title>Products</title>
+            </Helmet>
 
-                <Container>
-                    <SidebarComponent activeKey="2-2" />
-                        <Container>
-                            <HeaderComponent/>
+            <Container>
+                <SidebarComponent ActiveKey="2-2" />
+                    <Container>
+                        <HeaderComponent/>
                             <Content className='container-content'>
                                 <h2>Products</h2>
                             </Content>
-                            <FooterComponent />
-                        </Container>
-                </Container>
-                
-            </>
-            
+                        <FooterComponent />
+                    </Container>
+            </Container>
+        </> 
         )
-    }
 }
 
-export default ProductComponent
+export default ProductsComponent

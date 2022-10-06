@@ -17,8 +17,7 @@ import FlexboxGridItem from 'rsuite/esm/FlexboxGrid/FlexboxGridItem';
 import FooterComponent from '../../Layouts/Footer/footer.component';
 
 
-  class LoginComponent extends Component{
-    render(){
+  const LoginComponent = () => {
         return(
             <>
                 <Helmet>
@@ -60,7 +59,6 @@ import FooterComponent from '../../Layouts/Footer/footer.component';
                 </Container>
             </>
         )
-    }
   }
 
   export default LoginComponent

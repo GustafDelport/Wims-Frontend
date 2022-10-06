@@ -9,9 +9,7 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <CustomProvider theme='dark'>
-    <StrictMode>
       <App />
-    </StrictMode>
   </CustomProvider>
 
 )

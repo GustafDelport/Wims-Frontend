@@ -1,14 +1,12 @@
-import { Sidenav, Nav, Toggle, Navbar, Sidebar, Icon } from 'rsuite';
 import React, {Component} from 'react';
-import { isMobile } from "react-device-detect";
 
-import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
-import PageEndIcon from '@rsuite/icons/PageEnd';
-import PageTopIcon from '@rsuite/icons/PageTop';
+import { Sidenav, Nav, Toggle, Sidebar } from 'rsuite';
+import DashboardIcon from '@rsuite/icons/Dashboard';
+import MagicIcon from '@rsuite/icons/legacy/Magic';
+import PeoplesIcon from '@rsuite/icons/Peoples';
+import HistoryIcon from '@rsuite/icons/History';
+import GearIcon from '@rsuite/icons/Gear';
 
-import NavigationComponent from "./navigation.component";
-
-// Styles
 const headerStyles = {
     padding: 18,
     fontSize: '1rem',
@@ -29,88 +27,67 @@ const headerStylesSmall = {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textAlign: 'center'
-};
+}; 
 
-const divStyle ={
-    width: 20,
+const divStyle = {
     height: '100%',
     display: 'inline-table',
     marginRight: 10
-};
+}
 
-const NavToggle = ({expand, onChange}) => {
+const SidebarComponent = () =>{
+    const [expanded, setExpanded] = React.useState(true);
+    const [activeKey, setActiveKey] = React.useState('1');
     return(
-        <Navbar>
-            <Navbar.Brand>
-                <Nav pullRight>
-                    <Nav.Item onClick={onChange} icon={expand ? <PageTopIcon/> : <PageEndIcon/>}/>
+        <>
+        <div style={divStyle}>
+            <Sidebar 
+            style={{display: 'flex', flexDirection: 'column', height: '100%'}}
+            width={expanded ? 260 : 56}
+            collapsible>
+            <Sidenav expanded={expanded} defaultOpenKeys={['2','3', '4']}>
+                <Sidenav.Header>
+                    {!expanded ? (
+                        <div style={headerStyles}>
+                            W
+                        </div>
+                    ) : (
+                        <div style={headerStylesSmall}>
+                            Wims
+                        </div>
+                    )}
+                </Sidenav.Header>
+
+                <Sidenav.Body>
+                <Nav activeKey={activeKey} onSelect={setActiveKey}>
+                <Nav.Item eventKey="1" icon={<DashboardIcon/>} href="/">
+                    Dashboard
+                </Nav.Item>
+                    <Nav.Menu placement="rightStart" eventKey="2" title="Inventory" icon={<MagicIcon />}>
+                        <Nav.Item eventKey="2-1" href="/threshold">Thresholds</Nav.Item>
+                        <Nav.Item eventKey="2-2" href="/Product">Manage Products</Nav.Item>
+                        <Nav.Item eventKey="2-3" href="/Category">Manage Categories</Nav.Item>
+                    </Nav.Menu>
+                    <Nav.Menu placement="rightStart" eventKey="3" title="Suppliers" icon={<PeoplesIcon />}>
+                        <Nav.Item eventKey="3-1" href="/Supplier">Manage Suppliers</Nav.Item>
+                    </Nav.Menu>
+                    <Nav.Menu placement="rightStart" eventKey="4" title="Orders" icon={<HistoryIcon />}>
+                        <Nav.Item eventKey="4-1" href="/CurrentOrders">Current Orders</Nav.Item>
+                        <Nav.Item eventKey="4-2" href="/PastOrders">Past Orders</Nav.Item>
+                    </Nav.Menu>
+                    <Nav.Menu placement="rightStart" eventKey="5" title="Settings" icon={<GearIcon />}>
+                        <Nav.Item eventKey="5-1">General</Nav.Item>
+                        <Nav.Item eventKey="5-2">User Settings</Nav.Item>
+                    </Nav.Menu>
                 </Nav>
-            </Navbar.Brand>
-        </Navbar>
-    )
-}
-
-class SidebarComponent extends Component{
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            expand: true,
-            openKey: props.openKey || '',
-            activeKey: props.activeKey || ''
-        }
-
-        this.handleToggle = this.handleToggle.bind(this);
-    }
-
-    componentDidMount() {
-        if (isMobile) {
-            this.setState({
-                expand: false
-            });
-        }
-    }
-
-    handleToggle() {
-        this.setState({
-            expand: !this.state.expand
-        })
-    }
-
-    render(){
-        const { expand } = this.state;
-
-        return (
-            <div style={divStyle}>
-                <Sidebar
-                style={{ display: 'flex', flexDirection: 'column'}}
-                width={expand ? 256 : 56}
-                collapsible
-                >
-                    <Sidenav.Header>
-                        {!expand ? (
-                            <div style={headerStyles}>
-                                W
-                            </div>
-                        ) : (
-                            <div style={headerStylesSmall}>
-                                Wims
-                            </div>
-                        )}
-                    </Sidenav.Header>
-                    <Sidenav 
-                        expanded={expand}
-                        defaultOpenKeys={[`${this.state.openKey}`]}
-                        activeKey={this.state.activeKey}
-                    >
-                        <NavigationComponent />
-                    </Sidenav>
-                    <NavToggle expand={expand} onChange={this.handleToggle} />
-                </Sidebar>
-            </div>
+                </Sidenav.Body>
+                <Sidenav.Toggle expanded={expanded} onToggle={expanded => setExpanded(expanded)} />
+            </Sidenav>
+            </Sidebar>
+        </div>
             
-        )
-    }
-}
+        </>
+    )
+} 
 
 export default SidebarComponent 
