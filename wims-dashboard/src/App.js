@@ -1,18 +1,34 @@
 import {Component} from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { 
+  BrowserRouter as Router, 
+  Route,
+  Routes,
+} from "react-router-dom";
 
 // Components
-import DashboardComponent from "./components/pages/dashboard.component";
-import NotFoundComponent from "./components/pages/notfound.component";
+import DashboardComponent from "./Components/Pages/Dashboard/dashboard.component";
+import LoginComponent from "./Components/Pages/Login/login.component";
+import NotFoundComponent from "./Components/Pages/NotFound/notfound.component";
+
+//Inventory Components
+import ThresholdsComponent from "./Components/Pages/Inventory/Threshholds.component"
+import ProductsComponent from "./Components/Pages/Inventory/Products.component";
+import CategoriesComponent from "./Components/Pages/Inventory/Categories.component";
+
+//Suppliers
+import SuppliersComponent from "./Components/Pages/Suppliers/Suppliers.component";
+
+//Orders Components
+import CurrentOrdersComponent from "./Components/Pages/Orders/Current.Orders.component";
+import PastOrdersComponent from "./Components/Pages/Orders/Past.Orders.component";
 
 // Styles
 import './App.css';
-import 'rsuite/lib/styles/themes/default/index.less';
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import 'rsuite/dist/rsuite.min.css';
+
 
 //Services
-import DataService from "./Services/";
-import {Alert} from "rsuite";
+import DataService from "./Services/data.service";
 
 class App extends Component{
     constructor(props) {
@@ -30,12 +46,19 @@ class App extends Component{
     //all routes come here
     render() {
       return (
-        <BrowserRouter>
-          <Switch>
-            <Route exact path={["/", "/home", "/dashboard"]} component={DashboardComponent}/>
-            <Route component={NotFoundComponent}/>
-          </Switch>
-        </BrowserRouter>
+          <Router>
+            <Routes>
+              <Route path='/' element={<DashboardComponent/>}/>
+              <Route path='/login' element={<LoginComponent/>}/>
+              <Route path='/Threshold' element={<ThresholdsComponent/>}/>
+              <Route path='/Product' element={<ProductsComponent/>}/>
+              <Route path='/Category' element={<CategoriesComponent/>}/>
+              <Route path='/Supplier' element={<SuppliersComponent/>}/>
+              <Route path='/CurrentOrders' element={<CurrentOrdersComponent/>}/>
+              <Route path='/PastOrders' element={<PastOrdersComponent/>}/>
+              <Route path='*' element={<NotFoundComponent/>}/>
+            </Routes>
+          </Router>
       )
     }
 }
