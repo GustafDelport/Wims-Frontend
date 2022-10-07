@@ -2,23 +2,23 @@ import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
 import { Container, Content } from 'rsuite';
 
-import FooterComponent from '../../Layouts/Footer/footer.component';
-import SidebarComponent from '../../Layouts/Navigation/sidebar.component';
-import HeaderComponent from '../../Layouts/Header/header.component';
+import FooterComponent from '../../../Layouts/Footer/footer.component';
+import SidebarComponent from '../../../Layouts/Navigation/sidebar.component';
+import HeaderComponent from '../../../Layouts/Header/header.component';
 
-const ProductsComponent = () =>{
+const CategoriesComponent = () =>{
         return (
         <>
             <Helmet>
-                <title>Products</title>
+                <title>Categories</title>
             </Helmet>
 
             <Container>
-                <SidebarComponent activeKey="2-2" />
+                <SidebarComponent activeKey="2-3" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>
-                                <h2>Products</h2>
+                                <h2>Categories</h2>
                             </Content>
                         <FooterComponent />
                     </Container>
@@ -27,4 +27,4 @@ const ProductsComponent = () =>{
         )
 }
 
-export default ProductsComponent
+export default CategoriesComponent

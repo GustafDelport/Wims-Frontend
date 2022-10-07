@@ -2,29 +2,29 @@ import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
 import { Container, Content } from 'rsuite';
 
-import FooterComponent from '../../Layouts/Footer/footer.component';
-import SidebarComponent from '../../Layouts/Navigation/sidebar.component';
-import HeaderComponent from '../../Layouts/Header/header.component';
+import FooterComponent from '../../../Layouts/Footer/footer.component';
+import SidebarComponent from '../../../Layouts/Navigation/sidebar.component';
+import HeaderComponent from '../../../Layouts/Header/header.component';
 
-const ThresholdsComponent = () =>{
-        return (
+const CurrentOrdersComponent = () =>{
+    return (
         <>
             <Helmet>
-                <title>Thresholds</title>
+                <title>Current Orders</title>
             </Helmet>
 
             <Container>
-                <SidebarComponent activeKey="2-1" />
+                <SidebarComponent activeKey="4-1" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>
-                                <h2>Thresholds</h2>
+                                <h2>Current Orders</h2>
                             </Content>
                         <FooterComponent />
                     </Container>
             </Container>
         </> 
-        )
+    )
 }
 
-export default ThresholdsComponent
+export default CurrentOrdersComponent

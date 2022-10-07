@@ -10,7 +10,7 @@ import GearIcon from '@rsuite/icons/Gear';
 const headerStyles = {
     padding: 18,
     fontSize: '1rem',
-    height: '2rem',
+    //height: '2rem',
     // background: '#3326ae',
     color: '#fff',
     whiteSpace: 'nowrap',
@@ -21,7 +21,7 @@ const headerStyles = {
 const headerStylesSmall = {
     padding: 18,
     fontSize: '3rem',
-    height: '5rem',
+    //height: '5rem',
     // background: '#3326ae',
     color: '#fff',
     whiteSpace: 'nowrap',
@@ -32,7 +32,7 @@ const headerStylesSmall = {
 const divStyle = {
     height: '100%',
     display: 'inline-table',
-    marginRight: 10
+    marginRight: 15
 }
 
 const SidebarComponent = () =>{
@@ -64,9 +64,8 @@ const SidebarComponent = () =>{
                     Dashboard
                 </Nav.Item>
                     <Nav.Menu placement="rightStart" eventKey="2" title="Inventory" icon={<MagicIcon />}>
-                        <Nav.Item eventKey="2-1" href="/threshold">Thresholds</Nav.Item>
-                        <Nav.Item eventKey="2-2" href="/Product">Manage Products</Nav.Item>
-                        <Nav.Item eventKey="2-3" href="/Category">Manage Categories</Nav.Item>
+                        <Nav.Item eventKey="2-1" href="/Product">Manage Products</Nav.Item>
+                        <Nav.Item eventKey="2-2" href="/Category">Manage Categories</Nav.Item>
                     </Nav.Menu>
                     <Nav.Menu placement="rightStart" eventKey="3" title="Suppliers" icon={<PeoplesIcon />}>
                         <Nav.Item eventKey="3-1" href="/Supplier">Manage Suppliers</Nav.Item>

@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
 import { Container, Content } from 'rsuite';
 
-import FooterComponent from '../../Layouts/Footer/footer.component';
-import SidebarComponent from '../../Layouts/Navigation/sidebar.component';
-import HeaderComponent from '../../Layouts/Header/header.component';
+import FooterComponent from '../../../Layouts/Footer/footer.component';
+import SidebarComponent from '../../../Layouts/Navigation/sidebar.component';
+import HeaderComponent from '../../../Layouts/Header/header.component';
 
 const PastOrdersComponent = () =>{
         return (
