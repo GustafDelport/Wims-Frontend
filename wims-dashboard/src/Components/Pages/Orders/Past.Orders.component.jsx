@@ -14,7 +14,7 @@ const PastOrdersComponent = () =>{
             </Helmet>
 
             <Container>
-                <SidebarComponent ActiveKey="4-2" />
+                <SidebarComponent activeKey="4-2" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>

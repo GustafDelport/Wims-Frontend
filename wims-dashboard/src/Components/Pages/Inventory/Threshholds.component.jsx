@@ -14,7 +14,7 @@ const ThresholdsComponent = () =>{
             </Helmet>
 
             <Container>
-                <SidebarComponent ActiveKey="2-1" />
+                <SidebarComponent activeKey="2-1" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>

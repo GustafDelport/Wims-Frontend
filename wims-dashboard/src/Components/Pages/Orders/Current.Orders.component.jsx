@@ -14,7 +14,7 @@ const CurrentOrdersComponent = () =>{
             </Helmet>
 
             <Container>
-                <SidebarComponent ActiveKey="4-1" />
+                <SidebarComponent activeKey="4-1" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>

@@ -14,7 +14,7 @@ const SuppliersComponent = () => {
             </Helmet>
 
             <Container>
-                <SidebarComponent ActiveKey="3-1" />
+                <SidebarComponent activeKey="3-1" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>
