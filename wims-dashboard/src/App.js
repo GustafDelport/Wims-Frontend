@@ -11,16 +11,15 @@ import LoginComponent from "./Components/Pages/Login/login.component";
 import NotFoundComponent from "./Components/Pages/NotFound/notfound.component";
 
 //Inventory Components
-import ThresholdsComponent from "./Components/Pages/Inventory/Threshholds.component"
-import ProductsComponent from "./Components/Pages/Inventory/Products.component";
-import CategoriesComponent from "./Components/Pages/Inventory/Categories.component";
+import ProductsComponent from "./Components/Pages/Inventory/Product/Products.component";
+import CategoriesComponent from "./Components/Pages/Inventory/Categories/Categories.component";
 
 //Suppliers
 import SuppliersComponent from "./Components/Pages/Suppliers/Suppliers.component";
 
 //Orders Components
-import CurrentOrdersComponent from "./Components/Pages/Orders/Current.Orders.component";
-import PastOrdersComponent from "./Components/Pages/Orders/Past.Orders.component";
+import CurrentOrdersComponent from "./Components/Pages/Orders/CurrentOrders/Current.Orders.component";
+import PastOrdersComponent from "./Components/Pages/Orders/PastOrders/Past.Orders.component";
 
 // Styles
 import './App.css';
@@ -50,7 +49,6 @@ class App extends Component{
             <Routes>
               <Route path='/' element={<DashboardComponent/>}/>
               <Route path='/login' element={<LoginComponent/>}/>
-              <Route path='/Threshold' element={<ThresholdsComponent/>}/>
               <Route path='/Product' element={<ProductsComponent/>}/>
               <Route path='/Category' element={<CategoriesComponent/>}/>
               <Route path='/Supplier' element={<SuppliersComponent/>}/>
