@@ -14,7 +14,7 @@ const DashboardComponent = () => {
                 </Helmet>
 
                 <Container>
-                    <SidebarComponent/>
+                    <SidebarComponent activeKey="1"/>
                         <Container>
                             <HeaderComponent/>
                             <Content className='container-content'>

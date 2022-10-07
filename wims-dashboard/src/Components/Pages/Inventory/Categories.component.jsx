@@ -14,7 +14,7 @@ const CategoriesComponent = () =>{
             </Helmet>
 
             <Container>
-                <SidebarComponent ActiveKey="2-3" />
+                <SidebarComponent activeKey="2-3" />
                     <Container>
                         <HeaderComponent/>
                             <Content className='container-content'>

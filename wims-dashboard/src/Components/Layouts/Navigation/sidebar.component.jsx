@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-import { Sidenav, Nav, Toggle, Sidebar } from 'rsuite';
+import { Sidenav, Nav, Sidebar } from 'rsuite';
 import DashboardIcon from '@rsuite/icons/Dashboard';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import PeoplesIcon from '@rsuite/icons/Peoples';
