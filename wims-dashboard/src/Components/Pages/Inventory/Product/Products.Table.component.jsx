@@ -50,7 +50,7 @@ const renderRowExpanded = rowData => {
     )
   }
 
-const ProductTable = () => {
+function ProductTable(){
   const [limit, setLimit] = React.useState(5);
   const [page, setPage] = React.useState(1);
   const [expandedRowKeys, setExpandedRowKeys] = React.useState([]);

@@ -12,7 +12,7 @@ const headerStyles = {
     fontSize: '1rem',
     //height: '2rem',
     // background: '#3326ae',
-    color: '#fff',
+    // color: '#fff',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textAlign: 'center'
@@ -23,7 +23,7 @@ const headerStylesSmall = {
     fontSize: '3rem',
     //height: '5rem',
     // background: '#3326ae',
-    color: '#fff',
+    // color: '#fff',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textAlign: 'center'
@@ -35,7 +35,7 @@ const divStyle = {
     marginRight: 15
 }
 
-const SidebarComponent = () =>{
+function SidebarComponent(){
     const [expanded, setExpanded] = React.useState(true);
     const [activeKey, setActiveKey] = React.useState('1');
     return(

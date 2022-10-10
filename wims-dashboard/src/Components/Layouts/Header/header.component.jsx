@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Header, AvatarGroup, Avatar} from "rsuite";
 
-const HeaderComponent = () => {
+function HeaderComponent(){
     return (
         <>
             <Header style={{textAlign: "left", display: "flex"}}>

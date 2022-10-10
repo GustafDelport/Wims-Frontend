@@ -6,6 +6,7 @@ const object = [{
     "costPrice": 10.0,
     "qtyInStock": 60,
     "minThreshold": 10,
+    "avatar" : '/Assets/Products/CM.jfif',
     "category": {
         "id": "b51244b7-eb3b-41c6-9549-b8f251a14702",
         "name": "Rum",
@@ -21,6 +22,7 @@ const object = [{
     "costPrice": 10.0,
     "qtyInStock": 55,
     "minThreshold": 10,
+    "avatar" : '/Assets/Products/CLager.png',
     "category": {
         "id": "e5073990-8ddc-400a-a84c-32afcc0767ae",
         "name": "Beer",
@@ -30,12 +32,13 @@ const object = [{
 },
 {
     "id": "25ca67c4-071f-42c8-8557-814ac86c657a",
-    "name": "Castle Light",
+    "name": "Castle Lite",
     "description": "Local RSA Beer that is for the weak",
     "sellingPrice": 30.0,
     "costPrice": 12.0,
     "qtyInStock": 60,
     "minThreshold": 15,
+    "avatar" : '/Assets/Products/CLite.jfif',
     "category": {
         "id": "e5073990-8ddc-400a-a84c-32afcc0767ae",
         "name": "Beer",
@@ -51,6 +54,7 @@ const object = [{
     "costPrice": 80.0,
     "qtyInStock": 6,
     "minThreshold": 2,
+    "avatar" : '/Assets/Products/VL.jpg',
     "category": {
         "id": "ed9090e0-c419-4462-8d80-b8bd03e1b678",
         "name": "Wine",
@@ -66,6 +70,7 @@ const object = [{
     "costPrice": 9.0,
     "qtyInStock": 60,
     "minThreshold": 10,
+    "avatar" : '/Assets/Products/BLabel.jpg',
     "category": {
         "id": "e5073990-8ddc-400a-a84c-32afcc0767ae",
         "name": "Beer",
@@ -81,6 +86,7 @@ const object = [{
     "costPrice": 15.0,
     "qtyInStock": 40,
     "minThreshold": 1,
+    "avatar" : '/Assets/Products/JaB.jpg',
     "category": {
         "id": "e5073990-8ddc-400a-a84c-32afcc0768se",
         "name": "Whiskey",

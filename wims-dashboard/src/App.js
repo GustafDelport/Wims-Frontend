@@ -9,6 +9,9 @@ import {
 import DashboardComponent from "./Components/Pages/Dashboard/dashboard.component";
 import LoginComponent from "./Components/Pages/Login/login.component";
 import NotFoundComponent from "./Components/Pages/NotFound/notfound.component";
+import SidebarComponent from "./Components/Layouts/Navigation/sidebar.component";
+import HeaderComponent from "./Components/Layouts/Header/header.component";
+import FooterComponent from "./Components/Layouts/Footer/footer.component";
 
 //Inventory Components
 import ProductsComponent from "./Components/Pages/Inventory/Product/Products.component";
@@ -24,41 +27,36 @@ import PastOrdersComponent from "./Components/Pages/Orders/PastOrders/Past.Order
 // Styles
 import './App.css';
 import 'rsuite/dist/rsuite.min.css';
+//import "rsuite/src/styles/themes/default/index.less"
+
 
 
 //Services
 import DataService from "./Services/data.service";
+import { Container } from "rsuite";
 
-class App extends Component{
-    constructor(props) {
-        super(props);
-
-        this.state = {
-          data: undefined
-        }
-    }
-
-    async componentDidMount(){
-      
-    }
-
-    //all routes come here
-    render() {
-      return (
-          <Router>
-            <Routes>
-              <Route path='/' element={<DashboardComponent/>}/>
-              <Route path='/login' element={<LoginComponent/>}/>
-              <Route path='/Product' element={<ProductsComponent/>}/>
-              <Route path='/Category' element={<CategoriesComponent/>}/>
-              <Route path='/Supplier' element={<SuppliersComponent/>}/>
-              <Route path='/CurrentOrders' element={<CurrentOrdersComponent/>}/>
-              <Route path='/PastOrders' element={<PastOrdersComponent/>}/>
-              <Route path='*' element={<NotFoundComponent/>}/>
-            </Routes>
-          </Router>
-      )
-    }
+function App() {
+  return (
+      <Router>
+        <Container>
+          <SidebarComponent/>
+            <Container>
+              <HeaderComponent/>
+                <Routes>
+                  <Route path='/' element={DashboardComponent()}/>
+                  <Route path='/login' element={LoginComponent()}/>
+                  <Route path='/Product' element={ProductsComponent()}/>
+                  <Route path='/Category' element={CategoriesComponent()}/>
+                  <Route path='/Supplier' element={SuppliersComponent()}/>
+                  <Route path='/CurrentOrders' element={CurrentOrdersComponent()}/>
+                  <Route path='/PastOrders' element={PastOrdersComponent()}/>
+                  <Route path='*' element={NotFoundComponent()}/>
+                </Routes>
+              <FooterComponent/>
+            </Container>
+        </Container>
+      </Router>
+  )
 }
 
 export default App;

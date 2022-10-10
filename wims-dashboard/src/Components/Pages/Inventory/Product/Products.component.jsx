@@ -1,36 +1,27 @@
 import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
-import { Container, Content } from 'rsuite';
-
-import FooterComponent from '../../../Layouts/Footer/footer.component';
-import SidebarComponent from '../../../Layouts/Navigation/sidebar.component';
-import HeaderComponent from '../../../Layouts/Header/header.component';
+import { Container, Content, FlexboxGrid } from 'rsuite';
 
 import ProductTable from './Products.Table.component';
 
-const ProductsComponent = () =>{
+function ProductsComponent(){
         return (
         <>
             <Helmet>
                 <title>Products</title>
             </Helmet>
-
-            <Container>
-                <SidebarComponent activeKey="2-2" />
-                    <Container>
-                        <HeaderComponent/>
-                            <Content className='container-content'>
-                                <ProductTable/>
-                            </Content >
-                            <Content className='container-content'>
-                                <p>Hello</p>
-                            </Content>
-                            <Content className='container-content'>
-                                <p>Hello</p>
-                            </Content>
-                        <FooterComponent />
-                    </Container>
-            </Container>
+                <Content className='container-content'>
+                    <div className='show-grid'>
+                        <FlexboxGrid justify="center">
+                            <FlexboxGrid.Item colspan={8}>colspan={12}</FlexboxGrid.Item>
+                            <FlexboxGrid.Item colspan={8}>colspan={12}</FlexboxGrid.Item>
+                            <FlexboxGrid.Item colspan={8}>colspan={12}</FlexboxGrid.Item>
+                        </FlexboxGrid>
+                    </div>
+                </Content>
+                <Content className='container-content'>
+                    <ProductTable/>
+                </Content >
         </> 
         )
 }

@@ -5,31 +5,31 @@ import {Helmet} from "react-helmet";
 import SidebarComponent from "../../Layouts/Navigation/sidebar.component";
 import FooterComponent from "../../Layouts/Footer/footer.component";
 
-const NotFoundComponent = () => {
-        return (
-        <>
-            <Helmet>
-                <title>Not Found</title>
-            </Helmet>
-            <Container>
-                <Container className="container-content">
-                    <Header style={{textAlign: "center"}}>
-                        <h2>404</h2>
-                    </Header>
-                    <Divider />
-                    <Content>
-                        <div className="content-inner">
-                            <div>
-                                <h4 style={{textAlign: "center"}}>This page is lost</h4>
-                            </div>
+function NotFoundComponent(){
+    return (
+    <>
+        <Helmet>
+            <title>Not Found</title>
+        </Helmet>
+        <Container>
+            <Container className="container-content">
+                <Header style={{textAlign: "center"}}>
+                    <h2>404</h2>
+                </Header>
+                <Divider />
+                <Content>
+                    <div className="content-inner">
+                        <div>
+                            <h4 style={{textAlign: "center"}}>This page is lost</h4>
                         </div>
-                    </Content>
-                    <FooterComponent />
-                </Container>
+                    </div>
+                </Content>
+                <FooterComponent />
             </Container>
-        </>
-            
-        );
+        </Container>
+    </>
+        
+    );
 }
 
 export default NotFoundComponent;
