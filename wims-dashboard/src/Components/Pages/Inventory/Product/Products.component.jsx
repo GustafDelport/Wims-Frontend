@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
-import { Container, Content, FlexboxGrid } from 'rsuite';
+import { Container, Content, FlexboxGrid, Col } from 'rsuite';
 
 import ProductTable from './Products.Table.component';
+import ProductsValueComponent from './Products.Value.component';
 
 function ProductsComponent(){
         return (
@@ -12,10 +13,16 @@ function ProductsComponent(){
             </Helmet>
                 <Content className='container-content'>
                     <div className='show-grid'>
-                        <FlexboxGrid justify="center">
-                            <FlexboxGrid.Item colspan={8}>colspan={12}</FlexboxGrid.Item>
-                            <FlexboxGrid.Item colspan={8}>colspan={12}</FlexboxGrid.Item>
-                            <FlexboxGrid.Item colspan={8}>colspan={12}</FlexboxGrid.Item>
+                        <FlexboxGrid justify="space-around" style={{margin: '2rem'}}>
+                            <FlexboxGrid.Item colspan={8}>
+                                <ProductsValueComponent/>
+                            </FlexboxGrid.Item>
+                            <FlexboxGrid.Item colspan={8}>
+                                <ProductsValueComponent/>   
+                            </FlexboxGrid.Item>
+                            <FlexboxGrid.Item colspan={8}>
+                                <ProductsValueComponent/>
+                            </FlexboxGrid.Item>
                         </FlexboxGrid>
                     </div>
                 </Content>

@@ -5,11 +5,22 @@
 /* .container-content {
   margin-left: 1rem;
   margin-right: 1rem;
-}
+}*/
 
 .rs-content {
   border-radius: 2rem;
-} */
+  flex: 0 1 auto !important;
+}
+
+.rs-flex-box-grid-item-8{
+  position: relative;
+  display: block;
+  min-height: 1p;
+  width: 30%;
+  background-color: brown;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
 
 .rs-sidebar {
   height: 100%;

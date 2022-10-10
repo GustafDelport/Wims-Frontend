@@ -11,6 +11,7 @@ function NotFoundComponent(){
         <Helmet>
             <title>Not Found</title>
         </Helmet>
+        
         <Container>
             <Container className="container-content">
                 <Header style={{textAlign: "center"}}>

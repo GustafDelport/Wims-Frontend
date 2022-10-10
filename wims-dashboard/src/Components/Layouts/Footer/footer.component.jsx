@@ -3,9 +3,7 @@ import {Container, Footer} from "rsuite";
 
 function FooterComponent(){
         return (
-            <>
-                <Footer style={{textAlign: "center"}}>Copyright ©Wims 2022</Footer>
-            </> 
+            <Footer style={{textAlign: "center"}}>Copyright ©Wims 2022</Footer>
         )
 }
 
