@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Helmet} from "react-helmet";
-import { Container, Content, FlexboxGrid, Col } from 'rsuite';
+import {Content, FlexboxGrid, Col } from 'rsuite';
 
 import ProductTable from './Products.Table.component';
 import ProductsValueComponent from './Products.Value.component';
+import ProductsTrendingComponent from './Products.Trending.component';
+import ProductsLowStockComponent from './Products.LowStock';
 
 function ProductsComponent(){
         return (
@@ -13,15 +15,15 @@ function ProductsComponent(){
             </Helmet>
                 <Content className='container-content'>
                     <div className='show-grid'>
-                        <FlexboxGrid justify="space-around" style={{margin: '2rem'}}>
-                            <FlexboxGrid.Item colspan={8}>
+                        <FlexboxGrid justify="space-around">
+                            <FlexboxGrid.Item as={Col} md={7} className='Product-Widget-One' colspan={24}>
                                 <ProductsValueComponent/>
                             </FlexboxGrid.Item>
-                            <FlexboxGrid.Item colspan={8}>
-                                <ProductsValueComponent/>   
+                            <FlexboxGrid.Item as={Col} md={7} colspan={24}>
+                                <ProductsTrendingComponent/>   
                             </FlexboxGrid.Item>
-                            <FlexboxGrid.Item colspan={8}>
-                                <ProductsValueComponent/>
+                            <FlexboxGrid.Item as={Col} md={7} colspan={24}>
+                                <ProductsLowStockComponent/>
                             </FlexboxGrid.Item>
                         </FlexboxGrid>
                     </div>

@@ -51,7 +51,7 @@ const renderRowExpanded = rowData => {
   }
 
 function ProductTable(){
-  const [limit, setLimit] = React.useState(5);
+  const [limit, setLimit] = React.useState(10);
   const [page, setPage] = React.useState(1);
   const [expandedRowKeys, setExpandedRowKeys] = React.useState([]);
 
@@ -88,9 +88,9 @@ function ProductTable(){
   return (
     <div>
       <Table 
-        height={270} 
+        height={380} 
         data={data}
-        shouldUpdateScroll={false}
+        shouldUpdateScroll={true}
         rowKey={rowKey}
         expandedRowKeys={expandedRowKeys}
         
@@ -149,11 +149,11 @@ function ProductTable(){
           last
           ellipsis
           boundaryLinks
-          maxButtons={5}
+          maxButtons={10}
           size="xs"
           layout={['total', '-', 'limit', '|', 'pager', 'skip']}
           total={defaultData.length}
-          limitOptions={[5, 30, 50]}
+          limitOptions={[10, 30, 50]}
           limit={limit}
           activePage={page}
           onChangePage={setPage}

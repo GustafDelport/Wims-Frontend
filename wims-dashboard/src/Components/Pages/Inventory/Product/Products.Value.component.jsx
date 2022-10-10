@@ -1,10 +1,10 @@
 import React from 'react';
-import {Panel} from "rsuite";
+import {Panel, Carousel} from "rsuite";
 
 function ProductsValueComponent(){
     return(
         <Panel>
-            <span style={{marginLeft: '0.5rem'}}>Value</span>
+            <h1>R 22 000</h1>
         </Panel>
     )
 }

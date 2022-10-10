@@ -71,7 +71,7 @@ function SidebarComponent(){
                         <Nav.Item eventKey="3-1" href="/Supplier">Manage Suppliers</Nav.Item>
                     </Nav.Menu>
                     <Nav.Menu placement="rightStart" eventKey="4" title="Orders" icon={<HistoryIcon />}>
-                        <Nav.Item eventKey="4-1" href="/CurrentOrders">Current Orders</Nav.Item>
+                        <Nav.Item eventKey="4-1" href="/CurrentOrders">Create Order</Nav.Item>
                         <Nav.Item eventKey="4-2" href="/PastOrders">Past Orders</Nav.Item>
                     </Nav.Menu>
                     <Nav.Menu placement="rightStart" eventKey="5" title="Settings" icon={<GearIcon />}>

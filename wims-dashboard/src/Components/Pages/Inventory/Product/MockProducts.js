@@ -48,7 +48,7 @@ const object = [{
 },
 {
     "id": "28bd85c1-f050-4cc4-b04d-f52218b490df",
-    "name": "Van Lovering",
+    "name": "Van Loveren",
     "description": "A wine made from grapes",
     "sellingPrice": 150.0,
     "costPrice": 80.0,
